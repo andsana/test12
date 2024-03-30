@@ -24,3 +24,9 @@ export interface UserMutation {
   displayName: string;
   image: string | null;
 }
+
+export interface PhotoMutation {
+  user: string;
+  title: string;
+  image: string | null;
+}
