@@ -15,7 +15,7 @@ photosRouter.get('/', async (req, res, next) => {
   }
 
   try {
-    const results = await Photo.find(query);
+    const results = await Photo.find(query).populate('user', 'displayName');
     return res.send(results);
   } catch (e) {
     return next(e);
